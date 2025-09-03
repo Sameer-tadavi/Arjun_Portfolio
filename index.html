@@ -75,71 +75,66 @@
         <h3 class="text-xl sm:text-2xl font-semibold mb-2">Social Media Edits</h3>
         <p class="text-gray-300 text-sm sm:text-base">Instagram reels, TikToks, and short-form viral content.</p>
       </div>
+       <!-- Circular Buttons -->
+      <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-500 transition" onclick="scrollSlider('services-slider', -1)">❮</button>
+      <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-500 transition" onclick="scrollSlider('services-slider', 1)">❯</button>
     </div>
   </section>
 
   <!-- My Work Section -->
-  <section id="work" class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-16">
-    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">My <span class="text-blue-400">Work</span></h2>
+<section id="work" class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-10">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">My <span class="text-blue-400">Work</span></h2>
 
-    <!-- Instagram Reels (Now Vimeo Embeds) -->
-    <h3 class="text-xl sm:text-2xl font-semibold mb-6">Instagram Reels</h3>
-    <div id="reel-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-2 sm:px-4 py-4 gap-4 h-[260px] sm:h-[280px] snap-x snap-mandatory">
-
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
-        <iframe src="https://player.vimeo.com/video/1115251762?h=cedc1eb107&controls=1&title=0&byline=0&portrait=0" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"  
-                allowfullscreen></iframe>
+  <!-- Instagram Reels -->
+  <h3 class="text-xl sm:text-2xl font-semibold mb-4">Instagram Reels</h3>
+  <div class="relative">
+    <div id="reel-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-2 py-3 gap-3 h-[220px] sm:h-[240px] snap-x snap-mandatory">
+      <div class="min-w-[280px] sm:min-w-[320px] h-[200px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
+        <iframe src="https://player.vimeo.com/video/1115251762?h=cedc1eb107&controls=1&title=0&byline=0&portrait=0" allowfullscreen></iframe>
       </div>
-
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
-        <iframe src="https://player.vimeo.com/video/1115256438?controls=1&title=0&byline=0&portrait=0" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                allowfullscreen></iframe>
+      <div class="min-w-[280px] sm:min-w-[320px] h-[200px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
+        <iframe src="https://player.vimeo.com/video/1115256438?controls=1&title=0&byline=0&portrait=0" allowfullscreen></iframe>
       </div>
-
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
-        <iframe src="https://player.vimeo.com/video/1115262068?controls=1&title=0&byline=0&portrait=0" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                allowfullscreen></iframe>
+      <div class="min-w-[280px] sm:min-w-[320px] h-[200px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
+        <iframe src="https://player.vimeo.com/video/1115262068?controls=1&title=0&byline=0&portrait=0" allowfullscreen></iframe>
       </div>
+      <div class="min-w-[280px] sm:min-w-[320px] h-[200px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
+        <iframe src="https://player.vimeo.com/video/1115262611?controls=1&title=0&byline=0&portrait=0" allowfullscreen></iframe>
+      </div>
+    </div>
 
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
-        <iframe src="https://player.vimeo.com/video/1115262611?controls=1&title=0&byline=0&portrait=0" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                allowfullscreen></iframe>
+    <!-- Circular Buttons -->
+    <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-500 transition" onclick="scrollSlider('reel-slider', -1)">❮</button>
+    <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-500 transition" onclick="scrollSlider('reel-slider', 1)">❯</button>
+  </div>
+
+  <!-- YouTube Shorts -->
+  <h3 class="text-xl sm:text-2xl font-semibold mb-4 mt-10">YouTube Shorts</h3>
+  <div class="relative">
+    <div id="youtube-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-2 py-3 gap-3 h-[220px] sm:h-[240px] snap-x snap-mandatory">
+      <div class="min-w-[280px] sm:min-w-[320px] h-[200px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
+        <iframe src="https://www.youtube.com/embed/g6REwedcnfU" allowfullscreen></iframe>
+      </div>
+      <div class="min-w-[280px] sm:min-w-[320px] h-[200px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
+        <iframe src="https://www.youtube.com/embed/H3Ce0p3ie-s" allowfullscreen></iframe>
+      </div>
+      <div class="min-w-[280px] sm:min-w-[320px] h-[200px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
+        <iframe src="https://www.youtube.com/embed/ycQltzd0h1c" allowfullscreen></iframe>
+      </div>
+      <div class="min-w-[280px] sm:min-w-[320px] h-[200px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
+        <iframe src="https://www.youtube.com/embed/rOmA5JCDflg" allowfullscreen></iframe>
       </div>
       
-
     </div>
 
-    <!-- YouTube Shorts -->
-    <h3 class="text-xl sm:text-2xl font-semibold mb-6 mt-12">YouTube Shorts</h3>
-    <div id="youtube-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-2 sm:px-4 py-4 gap-4 h-[260px] sm:h-[280px] snap-x snap-mandatory">
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/g6REwedcnfU" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/H3Ce0p3ie-s" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ycQltzd0h1c" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/rOmA5JCDflg" frameborder="0" allowfullscreen></iframe>
-      </div>
-    
-    </div>
+    <!-- Circular Buttons -->
+    <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-500 transition" onclick="scrollSlider('youtube-slider', -1)">❮</button>
+    <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-500 transition" onclick="scrollSlider('youtube-slider', 1)">❯</button>
+  </div>
+</section>
 
-  </section>
+
+
 
   <!-- Contact Section -->
   <section id="contact" class="py-16 px-6 bg-gray-900 text-white">
