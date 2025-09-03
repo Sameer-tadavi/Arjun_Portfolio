@@ -19,7 +19,7 @@
     <div class="w-12 h-12 md:w-14 md:h-14">
       <img src="assets/computer.gif" alt="Logo" class="w-full h-full object-cover">
     </div>
-    <ul class="hidden sm:flex space-x-6 md:space-x-10 text-base md:text-lg font-medium">
+    <ul class="hidden sm:flex space-x-6 md:space-x-10 text-base md:text-lg font-medium" id="nav-links">
       <li><a href="#about" class="nav-link">About Me</a></li>
       <li><a href="#services" class="nav-link">Services</a></li>
       <li><a href="#work" class="nav-link">My Work</a></li>
@@ -59,19 +59,19 @@
     <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">My <span class="text-blue-400">Services</span></h2>
 
     <div id="services-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-4 sm:px-12 py-6 gap-6 snap-x snap-mandatory">
-      <div class="min-w-[250px] bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition snap-center">
+      <div class="min-w-[220px] bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition snap-center">
         <h3 class="text-xl sm:text-2xl font-semibold mb-2">Video Editing</h3>
         <p class="text-gray-300 text-sm sm:text-base">Professional editing for YouTube, ads, and branded content.</p>
       </div>
-      <div class="min-w-[250px] bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition snap-center">
+      <div class="min-w-[220px] bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition snap-center">
         <h3 class="text-xl sm:text-2xl font-semibold mb-2">Color Grading</h3>
         <p class="text-gray-300 text-sm sm:text-base">Enhance your videos with cinematic tones & vibrant visuals.</p>
       </div>
-      <div class="min-w-[250px] bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition snap-center">
+      <div class="min-w-[220px] bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition snap-center">
         <h3 class="text-xl sm:text-2xl font-semibold mb-2">Motion Graphics</h3>
         <p class="text-gray-300 text-sm sm:text-base">Animated intros, titles, and transitions for a pro look.</p>
       </div>
-      <div class="min-w-[250px] bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition snap-center">
+      <div class="min-w-[220px] bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition snap-center">
         <h3 class="text-xl sm:text-2xl font-semibold mb-2">Social Media Edits</h3>
         <p class="text-gray-300 text-sm sm:text-base">Instagram reels, TikToks, and short-form viral content.</p>
       </div>
@@ -82,90 +82,44 @@
   <section id="work" class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-16">
     <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">My <span class="text-blue-400">Work</span></h2>
 
-    <!-- Instagram Reels (Now Vimeo Embeds) -->
+    <!-- Instagram Reels -->
     <h3 class="text-xl sm:text-2xl font-semibold mb-6">Instagram Reels</h3>
-    <div id="reel-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-2 sm:px-4 py-4 gap-4 h-[260px] sm:h-[280px] snap-x snap-mandatory">
-
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
-        <iframe src="https://player.vimeo.com/video/1115251762?h=cedc1eb107&controls=1&title=0&byline=0&portrait=0" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"  
-                allowfullscreen></iframe>
+    <div class="relative">
+      <button class="slider-btn left-2" onclick="scrollSlider('reel-slider','left')">❮</button>
+      <div id="reel-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-2 sm:px-4 py-4 gap-4 h-[240px] snap-x snap-mandatory">
+        <div class="min-w-[300px] sm:min-w-[340px] h-[220px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
+          <iframe src="https://player.vimeo.com/video/1115251762?h=cedc1eb107&controls=1&title=0&byline=0&portrait=0" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="min-w-[300px] sm:min-w-[340px] h-[220px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
+          <iframe src="https://player.vimeo.com/video/1115256438?controls=1&title=0&byline=0&portrait=0" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="min-w-[300px] sm:min-w-[340px] h-[220px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
+          <iframe src="https://player.vimeo.com/video/1115262068?controls=1&title=0&byline=0&portrait=0" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
-
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
-        <iframe src="https://player.vimeo.com/video/1115256438?controls=1&title=0&byline=0&portrait=0" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                allowfullscreen></iframe>
-      </div>
-
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
-        <iframe src="https://player.vimeo.com/video/1115262068?controls=1&title=0&byline=0&portrait=0" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                allowfullscreen></iframe>
-      </div>
-
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl border-2 border-white overflow-hidden hover:scale-105 transition snap-center">
-        <iframe src="https://player.vimeo.com/video/1115262611?controls=1&title=0&byline=0&portrait=0" 
-                class="w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                allowfullscreen></iframe>
-      </div>
-      
-
+      <button class="slider-btn right-2" onclick="scrollSlider('reel-slider','right')">❯</button>
     </div>
 
     <!-- YouTube Shorts -->
     <h3 class="text-xl sm:text-2xl font-semibold mb-6 mt-12">YouTube Shorts</h3>
-    <div id="youtube-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-2 sm:px-4 py-4 gap-4 h-[260px] sm:h-[280px] snap-x snap-mandatory">
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/g6REwedcnfU" frameborder="0" allowfullscreen></iframe>
+    <div class="relative">
+      <button class="slider-btn left-2" onclick="scrollSlider('youtube-slider','left')">❮</button>
+      <div id="youtube-slider" class="flex overflow-x-auto scroll-smooth no-scrollbar px-2 sm:px-4 py-4 gap-4 h-[240px] snap-x snap-mandatory">
+        <div class="min-w-[300px] sm:min-w-[340px] h-[220px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
+          <iframe src="https://www.youtube.com/embed/g6REwedcnfU" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="min-w-[300px] sm:min-w-[340px] h-[220px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
+          <iframe src="https://www.youtube.com/embed/H3Ce0p3ie-s" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="min-w-[300px] sm:min-w-[340px] h-[220px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
+          <iframe src="https://www.youtube.com/embed/ycQltzd0h1c" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/H3Ce0p3ie-s" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ycQltzd0h1c" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="min-w-[340px] sm:min-w-[380px] h-[240px] rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition snap-center">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/rOmA5JCDflg" frameborder="0" allowfullscreen></iframe>
-      </div>
-    
-    </div>
-
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-6 bg-gray-900 text-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Let’s Connect</h2>
-      <p class="text-gray-400 mb-10 text-sm sm:text-base">Find me on my social media handles</p>
-      <div class="flex justify-center flex-wrap gap-6 mb-10">
-        <a href="https://www.instagram.com/arjx_32/?igsh=dDZuYm0xN3NlYjFj#" target="_blank"
-           class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 transition shadow-lg">
-          <img src="assets/instagram.png" alt="Instagram" class="w-7 h-7 sm:w-8 sm:h-8">
-        </a>
-        <a href="https://www.linkedin.com/in/arjun-paswan-55b983220" target="_blank"
-           class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition shadow-lg">
-          <img src="assets/linkedin.png" alt="LinkedIn" class="w-7 h-7 sm:w-8 sm:h-8">
-        </a>
-        <a href="mailto:Workspacearjun154@gmail.com"
-           class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-500 transition shadow-lg">
-          <img src="assets/mail.png" alt="Email" class="w-7 h-7 sm:w-8 sm:h-8">
-        </a>
-        <a href="https://youtube.com/@arjun_z8t-z8i" target="_blank"
-           class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition shadow-lg">
-          <img src="assets/youtube.png" alt="YouTube" class="w-7 h-7 sm:w-8 sm:h-8">
-        </a>
-      </div>
+      <button class="slider-btn right-2" onclick="scrollSlider('youtube-slider','right')">❯</button>
     </div>
   </section>
+
+  <!-- Contact Section --> <section id="contact" class="py-16 px-6 bg-gray-900 text-white"> <div class="max-w-4xl mx-auto text-center"> <h2 class="text-3xl sm:text-4xl font-bold mb-6">Let’s Connect</h2> <p class="text-gray-400 mb-10 text-sm sm:text-base">Find me on my social media handles</p> <div class="flex justify-center flex-wrap gap-6 mb-10"> <a href="https://www.instagram.com/arjx_32/?igsh=dDZuYm0xN3NlYjFj#" target="_blank" class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 transition shadow-lg"> <img src="assets/instagram.png" alt="Instagram" class="w-7 h-7 sm:w-8 sm:h-8"> </a> <a href="https://www.linkedin.com/in/arjun-paswan-55b983220" target="_blank" class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition shadow-lg"> <img src="assets/linkedin.png" alt="LinkedIn" class="w-7 h-7 sm:w-8 sm:h-8"> </a> <a href="mailto:Workspacearjun154@gmail.com" class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-500 transition shadow-lg"> <img src="assets/mail.png" alt="Email" class="w-7 h-7 sm:w-8 sm:h-8"> </a> <a href="https://youtube.com/@arjun_z8t-z8i" target="_blank" class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition shadow-lg"> <img src="assets/youtube.png" alt="YouTube" class="w-7 h-7 sm:w-8 sm:h-8"> </a> </div> </div> </section>
 
   <script src="script.js"></script>
 </body>

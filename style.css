@@ -1,54 +1,56 @@
-/* Background Pattern (optional, can be added to body or sections if needed) */
+/* Background Pattern */
 .pattern-bg {
-  background-color: #111827; /* Dark background */
+  background-color: #111827;
   background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0);
   background-size: 40px 40px;
 }
 
-/* Hide scrollbar for sliders */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE/Edge */
-  scrollbar-width: none; /* Firefox */
-}
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Smooth hover animation for scaling */
+/* Hover animation */
 .hover\:scale-105 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Fix iframe/video full fit */
+/* Video iframes */
 iframe, video {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures video thumbnails don’t stretch */
+  object-fit: cover;
   border: none;
 }
-/* Prevent up-down movement in sliders */
-#reel-slider,
-#youtube-slider {
+
+/* Slider settings */
+#reel-slider, #youtube-slider {
   overflow-x: auto;
-  overflow-y: hidden;   /* stops vertical scroll */
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Lock card height */
 #reel-slider > div,
 #youtube-slider > div {
-  height: 240px;        /* match your card height */
-  flex-shrink: 0;       /* prevent shrinking/stretching */
+  height: 220px;
+  flex-shrink: 0;
 }
 
-/* Lock iframe to card height */
-#reel-slider iframe,
-#youtube-slider iframe {
-  height: 100% !important;
-  width: 100% !important;
-  object-fit: cover;
-  display: block;
+/* Navigation buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.2s;
 }
-
+.slider-btn:hover {
+  background: rgba(59, 130, 246, 0.8); /* blue-500 */
+}
