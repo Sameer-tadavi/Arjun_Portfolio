@@ -1,72 +1,113 @@
-/* Background Pattern (optional, can be added to body or sections if needed) */
+/* ---------- Global ---------- */
+:root {
+  --navbar-h: 72px;
+}
+
+/* Pattern option if needed on sections */
+/*
 .pattern-bg {
-  background-color: #111827; /* Dark background */
-  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-color: #111827;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
   background-size: 40px 40px;
 }
+*/
 
-/* Hide scrollbar for sliders */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE/Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* Smooth hover animation for scaling */
-.hover\:scale-105 {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Reduce layout jank when iOS hides URL bar */
+@supports (padding: max(0px)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
-/* Fix iframe/video full fit */
-iframe, video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures video thumbnails don’t stretch */
-  border: none;
+/* ---------- Reusable UI ---------- */
+.service-card {
+  min-width: 260px;
+  background-color: #1f2937; /* gray-800 */
+  border-radius: 1rem;       /* rounded-2xl */
+  padding: 1.25rem;          /* p-5 */
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.35);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
-/* Prevent up-down movement in sliders */
+.service-card:active { transform: scale(0.98); }
+.service-card:hover { transform: translateY(-2px); }
+
+/* Social buttons */
+.social-btn {
+  width: 3.5rem; height: 3.5rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 9999px;
+  transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.35);
+}
+@media (min-width: 640px) {
+  .social-btn { width: 4rem; height: 4rem; }
+}
+.social-btn:active { transform: scale(0.97); }
+
+/* ---------- Carousels (horizontal) ---------- */
+#services-slider,
 #reel-slider,
 #youtube-slider {
   overflow-x: auto;
-  overflow-y: hidden;   /* stops vertical scroll */
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Lock card height */
-#reel-slider > div,
-#youtube-slider > div {
-  height: 240px;        /* match your card height */
-  flex-shrink: 0;       /* prevent shrinking/stretching */
+/* Card base (lets content define height) */
+.media-card {
+  min-width: 280px;
+  max-width: 340px;
+  flex: 0 0 auto; /* no shrink */
 }
 
-/* Lock iframe to card height */
-#reel-slider iframe,
-#youtube-slider iframe {
-  height: 100% !important;
-  width: 100% !important;
-  object-fit: cover;
+/* Aspect Ratio helpers (no Tailwind plugin needed) */
+.ratio-9-16 {
+  position: relative;
+  width: 100%;
+  /* 16/9 = 1.777..., for 9:16 we use 177.78% padding-top */
+  padding-top: 177.78%;
+  background: #0b0b0b;
+}
+.ratio-9-16 > iframe,
+.ratio-9-16 > video,
+.ratio-9-16 > .ratio-content {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0;
   display: block;
+  object-fit: cover;
 }
 
-/* Reduce padding across sections */
-section {
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
+/* Carousel buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border-radius: 9999px;
+  display: flex; align-items: center; justify-content: center;
+  background: #1f2937; /* gray-800 */
+  color: white;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.45);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+.carousel-btn:active { transform: translateY(-50%) scale(0.98); }
+.carousel-btn:hover { background: rgb(59 130 246); } /* blue-500 */
+
+/* ---------- Misc ---------- */
+.nav-link {
+  color: #e5e7eb; /* gray-200 */
+  transition: color 150ms ease, opacity 150ms ease;
+}
+.nav-link:hover { color: white; }
+.nav-link:focus-visible { outline: none; }
+
+section { /* keep section padding comfortable on mobile */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-/* Adjust slider card sizes */
-#reel-slider > div,
-#youtube-slider > div {
-  height: 200px;
-  flex-shrink: 0;
-}
-
-/* Reduce gaps */
-#reel-slider,
-#youtube-slider {
-  gap: 0.75rem; /* smaller spacing between cards */
-}
+/* Ensure anchor links don’t sit under the fixed navbar */
+#about, #services, #work, #contact { scroll-margin-top: var(--navbar-h); }
