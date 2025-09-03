@@ -1,1 +1,54 @@
-/* Background Pattern (optional, can be added to body or sections if needed) */ .pattern-bg { background-color: #111827; /* Dark background */ background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0); background-size: 40px 40px; } /* Hide scrollbar for sliders */ .no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { -ms-overflow-style: none; /* IE/Edge */ scrollbar-width: none; /* Firefox */ } /* Smooth hover animation for scaling */ .hover\:scale-105 { transition: transform 0.3s ease, box-shadow 0.3s ease; } /* Fix iframe/video full fit */ iframe, video { display: block; width: 100%; height: 100%; object-fit: cover; /* Ensures video thumbnails don’t stretch */ border: none; } /* Prevent up-down movement in sliders */ #reel-slider, #youtube-slider { overflow-x: auto; overflow-y: hidden; /* stops vertical scroll */ scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; } /* Lock card height */ #reel-slider > div, #youtube-slider > div { height: 240px; /* match your card height */ flex-shrink: 0; /* prevent shrinking/stretching */ } /* Lock iframe to card height */ #reel-slider iframe, #youtube-slider iframe { height: 100% !important; width: 100% !important; object-fit: cover; display: block; } /* Reduce padding across sections */ section { padding-top: 2rem !important; padding-bottom: 2rem !important; } /* Adjust slider card sizes */ #reel-slider > div, #youtube-slider > div { height: 200px; flex-shrink: 0; } /* Reduce gaps */ #reel-slider, #youtube-slider { gap: 0.75rem; /* smaller spacing between cards */ }
+/* Background Pattern (optional, can be added to body or sections if needed) */
+.pattern-bg {
+  background-color: #111827; /* Dark background */
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Hide scrollbar for sliders */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Smooth hover animation for scaling */
+.hover\:scale-105 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fix iframe/video full fit */
+iframe, video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video thumbnails don’t stretch */
+  border: none;
+}
+/* Prevent up-down movement in sliders */
+#reel-slider,
+#youtube-slider {
+  overflow-x: auto;
+  overflow-y: hidden;   /* stops vertical scroll */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Lock card height */
+#reel-slider > div,
+#youtube-slider > div {
+  height: 240px;        /* match your card height */
+  flex-shrink: 0;       /* prevent shrinking/stretching */
+}
+
+/* Lock iframe to card height */
+#reel-slider iframe,
+#youtube-slider iframe {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover;
+  display: block;
+}
+
