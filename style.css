@@ -16,10 +16,9 @@
 
 /* Video iframes */
 iframe, video {
-  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border-radius: 1rem;
   border: none;
 }
 
@@ -33,8 +32,10 @@ iframe, video {
 
 #reel-slider > div,
 #youtube-slider > div {
-  height: 220px;
-  flex-shrink: 0;
+  flex: 0 0 300px; /* fixed base width */
+  max-width: 90%; /* responsive on small screens */
+  height: auto;   /* let the card height adjust */
+  aspect-ratio: 9/16; /* keeps vertical video shape */
 }
 
 /* Navigation buttons */
